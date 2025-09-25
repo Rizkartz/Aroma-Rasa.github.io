@@ -1,100 +1,75 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aroma Rasa</title>
-    <link rel="stylesheet" href="main.css">
-    <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <script src="style.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aroma Rasa</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <div id="logo">
-        <img src="img/Aroma Rasa.png" alt="Logo Aroma Rasa">
-    </div>
+<body class="font-sans bg-gray-50 text-gray-800">
 
-    <div class="search-container">
-        <span class="material-symbols-outlined">search</span>
-        <input class="search-input" type="text" placeholder="Search...">
-        
-    <div class="material"></div>
-            <span class="material-symbols-outlined person-icon" onclick="toggleMenu()">person</span>
-            
-    </div>
+  <header id="navbar" class="fixed top-0 left-0 w-full bg-white/80 backdrop-blur-md transition-all duration-300 z-50 px-6 py-4 flex justify-between items-center">
+    <div class="font-bold text-xl">Aroma Rasa</div>
+    <nav class="space-x-4 hidden md:block">
+      <a href="#about" class="hover:text-blue-600">Tentang</a>
+      <a href="#menu" class="hover:text-blue-600">Menu</a>
+      <a href="#history" class="hover:text-blue-600">Sejarah</a>
+    </nav>
+  </header>
 
-    <div class="hero">
-        <img src="img/kue lumpur.jpg" alt="Kue Lumpur">
-        <img src="img/Kopi gula aren.jpg" alt="Kopi Gula Aren">
-        <img src="img/Moca Coffe.jpg" alt="Moca Coffe">
-        <div class="welcome-text">SELAMAT DATANG DI AROMA RASA</div>
-    </div>
+  <section class="h-screen flex flex-col justify-center items-center bg-gradient-to-r from-amber-200 to-yellow-100 text-center px-6">
+    <h1 id="typing-text" class="text-3xl md:text-5xl font-extrabold text-gray-900"></h1>
+    <p class="mt-4 text-lg md:text-xl text-gray-700">Nikmati kopi & kue terbaik dari Aroma Rasa</p>
+  </section>
 
-    <div class="layout" id="layout1">
-        <div class="about-me">
-            <div class="photo-container">
-                <img src="img/alamak.jpg" alt="Foto Saya">
-                <form>
-                    <h1>Social Account:</h1>
-                    <div class="social-media">
-                        <a href="https://www.instagram.com/rz.kxc" target="_blank" class="icon"><i class="fa-brands fa-instagram"></i> rz.kxc</a>
-                        <a href="https://discord.com/users/355842872299356162" target="_blank" class="icon"><i class="fa-brands fa-discord"></i> Rizkartz</a>
-                        <a href="https://github.com/Rizkartz" target="_blank" class="icon"><i class="fa-brands fa-github"></i> Rizkartz</a>
-                    </div>
-                </form>
-            </div>
-
-            <div class="text-container">
-                <h2>TENTANG SAYA</h2>
-                <p>Halo, saya Moch Rizky Gyanindra, berusia 17 tahun dan berasal dari Surabaya. Saat ini, saya menempuh pendidikan di SMA Negeri 2 Surabaya dan memiliki minat besar dalam dunia teknologi informasi. Ketertarikan saya terhadap IT dimulai sejak SMP, tetapi baru di kelas 10 saya mulai mendalaminya dengan serius. Pada saat kelas 11, saya mulai merasa bosan, tetapi melalui proyek ini, saya harap bisa mendapatkan manfaat untuk ke depannya.</p>
-            </div>
-        </div>
+  <section id="about" data-animate class="opacity-0 translate-y-5 transition-all duration-700 ease-out px-6 py-20 text-center md:text-left md:grid md:grid-cols-2 gap-10 items-center">
+    <img src="img/alamak.jpg" alt="Foto Saya" class="rounded-xl shadow-lg w-full max-w-md mx-auto">
+    <div>
+      <h2 class="text-2xl md:text-3xl font-bold mb-4">Tentang Saya</h2>
+      <p class="text-gray-600 leading-relaxed">
+        Halo, saya Moch Rizky Gyanindra dari Surabaya. Saya memiliki ketertarikan dalam dunia teknologi informasi sejak SMP, dan mulai serius mendalaminya sejak SMA. Website ini saya buat sebagai media belajar dan menuangkan ide.
+      </p>
+      <div class="flex space-x-4 mt-6 justify-center md:justify-start">
+        <a href="https://www.instagram.com/rz.kxc" target="_blank" class="text-pink-500 hover:scale-110 transition"><i class="fa-brands fa-instagram text-2xl"></i></a>
+        <a href="https://discord.com/users/355842872299356162" target="_blank" class="text-indigo-500 hover:scale-110 transition"><i class="fa-brands fa-discord text-2xl"></i></a>
+        <a href="https://github.com/Rizkartz" target="_blank" class="text-gray-900 hover:scale-110 transition"><i class="fa-brands fa-github text-2xl"></i></a>
+      </div>
     </div>
+  </section>
 
-    <div class="layout" id="layout2">
-        <h2>MENU</h2>
-        <div class="menu-container">
-            <div class="menu-item">
-                <img src="img/Moca Coffe.jpg" alt="Moca Caffe">
-                <p>MOCA CAFFE</p>
-                <button class="menu-btn">Order</button>
-            </div>
-            <div class="menu-item">
-                <img src="img/Kopi gula aren.jpg" alt="Kopi Susu Gula Aren">
-                <p>KOPI SUSU GULA AREN</p>
-                <button class="menu-btn">Order</button>
-            </div>
-            <div class="menu-item">
-                <img src="img/Japanese cheese cake.jpg" alt="Japanese Cheese Cake">
-                <p>JAPANESE CHEESE CAKE</p>
-                <button class="menu-btn">Order</button>
-            </div>
-            <div class="menu-item">
-                <img src="img/kue lumpur.jpg" alt="Kue Lumpur">
-                <p>Kue Lumpur</p>
-                <button class="menu-btn">Order</button>
-            </div>
-        </div>
+  <section id="menu" class="px-6 py-20 bg-white text-center">
+    <h2 class="text-2xl md:text-3xl font-bold mb-10">Menu</h2>
+    <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-8">
+      <div data-animate class="opacity-0 translate-y-5 transition-all duration-700 ease-out bg-gray-100 p-4 rounded-lg shadow hover:scale-105 hover:shadow-xl">
+        <img src="img/Moca Coffe.jpg" alt="Moca Coffee" class="rounded-md mb-4">
+        <p class="font-semibold">Moca Coffee</p>
+        <button class="mt-2 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Order</button>
+      </div>
+      <div data-animate class="opacity-0 translate-y-5 transition-all duration-700 ease-out bg-gray-100 p-4 rounded-lg shadow hover:scale-105 hover:shadow-xl">
+        <img src="img/Kopi gula aren.jpg" alt="Kopi Susu Gula Aren" class="rounded-md mb-4">
+        <p class="font-semibold">Kopi Susu Gula Aren</p>
+        <button class="mt-2 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Order</button>
+      </div>
+      <div data-animate class="opacity-0 translate-y-5 transition-all duration-700 ease-out bg-gray-100 p-4 rounded-lg shadow hover:scale-105 hover:shadow-xl">
+        <img src="img/Japanese cheese cake.jpg" alt="Japanese Cheese Cake" class="rounded-md mb-4">
+        <p class="font-semibold">Japanese Cheese Cake</p>
+        <button class="mt-2 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Order</button>
+      </div>
+      <div data-animate class="opacity-0 translate-y-5 transition-all duration-700 ease-out bg-gray-100 p-4 rounded-lg shadow hover:scale-105 hover:shadow-xl">
+        <img src="img/kue lumpur.jpg" alt="Kue Lumpur" class="rounded-md mb-4">
+        <p class="font-semibold">Kue Lumpur</p>
+        <button class="mt-2 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Order</button>
+      </div>
     </div>
+  </section>
 
-    
-    <div class="layout" id="layout3">
-        <h2>Mengapa Aroma Rasa?</h2>
-        <div class="history-container">
-            <div class="history-image">
-                <img src="img/Aroma Rasa.png" alt="Aroma Rasa">
-            </div>
-            <div class="history-text">
-                <p>Aroma Rasa hadir dengan filosofi bahwa setiap tegukan kopi dan gigitan makanan adalah pengalaman yang membawa kenangan dan kehangatan. Kami mengutamakan kualitas terbaik, rasa autentik, dan pelayanan yang hangat untuk menciptakan suasana yang nyaman bagi pelanggan.</p>
-            </div>
-        </div>
-    </div>
-            </div>
-    </div>
+  <footer class="bg-gray-900 text-gray-300 text-center py-6 mt-10">
+    <p>&copy; 2025 Aroma Rasa. All Rights Reserved.</p>
+    <a href="mailto:Aromarasa@gmail.com" class="text-blue-400 hover:underline">Aromarasa@gmail.com</a>
+  </footer>
 
-    <footer>
-        <p>&copy; 2025 Aroma Rasa, All Rights Reserved. Contact us: <a href="mailto:Aromarasa@gmail.com">Aromarasa@gmail.com</a></p>
-    </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
+  <script src="style.js"></script>
 </body>
 </html>
